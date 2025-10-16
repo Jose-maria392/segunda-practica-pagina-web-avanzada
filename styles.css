@@ -1,0 +1,123 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Temas (CSS Variables) --- */
+:root {
+    /* Tema Claro (por defecto) */
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+    --header-bg: #e0e0e6;
+    --button-bg: #007bff;
+    --button-text: white;
+    --form-bg: white;
+    --border-color: #ccc;
+}
+
+.dark-theme {
+    /* Tema Oscuro */
+    --bg-color: #2c3e50;
+    --text-color: #ecf0f1;
+    --header-bg: #34495e;
+    --button-bg: #2ecc71;
+    --button-text: #2c3e50;
+    --form-bg: #34495e;
+    --border-color: #4a6279;
+}
+
+/* --- Encabezado --- */
+header {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* --- Botón de Tema --- */
+#theme-toggle {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#theme-toggle:hover {
+    opacity: 0.9;
+}
+
+/* --- Contenido y Formulario --- */
+main {
+    padding: 40px 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 85vh; /* Para que el fondo cubra la página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: var(--form-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box; /* Incluye padding en el ancho */
+    background-color: var(--form-bg); /* Mantiene el color de fondo del formulario */
+    color: var(--text-color);
+}
+
+/* --- Botón de Enviar --- */
+#submit-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+#submit-btn:hover {
+    opacity: 0.9;
+}
